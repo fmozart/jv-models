@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Notícias</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: #87CEFA; /* Azul claro */
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        header img {
+            max-height: 50px;
+        }
+        header nav {
+            display: flex;
+            gap: 20px;
+        }
+        header nav a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+        .search-bar {
+            margin-left: auto;
+        }
+        .search-bar input[type="text"] {
+            padding: 5px;
+            font-size: 16px;
+        }
+        .search-bar input[type="submit"] {
+            padding: 5px 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .main-content {
+            padding: 20px;
+        }
+        .main-content .main-news {
+            margin-bottom: 20px;
+        }
+        .main-news img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .main-news h1 {
+            margin: 0;
+        }
+        .main-news p {
+            font-size: 18px;
+        }
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .news-item {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .news-item img {
+            width: 100%;
+            height: auto;
+        }
+        .news-item .content {
+            padding: 10px;
+        }
+        .news-item .content h2 {
+            margin-top: 0;
+            font-size: 16px;
+        }
+        .news-item .content p {
+            margin: 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo-placeholder.png" alt="Logo">
+        <nav>
+            <a href="{% url 'cadastro' %}">Cadastro</a>
+            <a href="#perfil">Perfil</a>
+            <a href="#categoria">Categoria</a>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar notícias...">
+            <input type="submit" value="Buscar">
+        </div>
+    </header>
+    <div class="main-content">
+        <div class="main-news">
+            <img src="noticias/teste.png" alt="Notícia Principal">
+            <h1>Título da Notícia Principal</h1>
+            <p>Prévia do texto da notícia principal. Aqui você pode incluir uma breve descrição do principal evento ou assunto do dia.</p>
+        </div>
+        <div class="news-grid">
+            <div class="news-item">
+                <img src="news1.jpg" alt="Notícia 1">
+                <div class="content">
+                    <h2>Título da Notícia 1</h2>
+                    <p>Prévia do texto da notícia 1.</p>
+                </div>
+            </div>
+            <div class="news-item">
+                <img src="news2.jpg" alt="Notícia 2">
+                <div class="content">
+                    <h2>Título da Notícia 2</h2>
+                    <p>Prévia do texto da notícia 2.</p>
+                </div>
+            </div>
+            <div class="news-item">
+                <img src="news3.jpg" alt="Notícia 3">
+                <div class="content">
+                    <h2>Título da Notícia 3</h2>
+                    <p>Prévia do texto da notícia 3.</p>
+                </div>
+            </div>
+            <div class="news-item">
+                <img src="news4.jpg" alt="Notícia 4">
+                <div class="content">
+                    <h2>Título da Notícia 4</h2>
+                    <p>Prévia do texto da notícia 4.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
